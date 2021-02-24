@@ -1,4 +1,5 @@
-import 'package:Annapurna/screen/welcome_page.dart';
+// import 'package:Annapurna/screen/welcome_page.dart';
+import 'package:Annapurna/screen/login_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,12 +14,12 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-       
-        primarySwatch: Colors.red,
-        
+        primaryColor: Colors.blue,
+        accentColor: Colors.blue,        
+        textSelectionColor: Colors.red,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: WelcomePage(),
+      home: LoginPage(),
     );
   }
 }

@@ -8,7 +8,7 @@ class WelcomePage extends StatelessWidget {
       child: RaisedButton(
         color: color,
         shape: RoundedRectangleBorder(
-          side: BorderSide(color: Colors.green, width: 2),
+            side: BorderSide(color: Colors.green, width: 2),
             borderRadius: BorderRadius.circular(30)),
         onPressed: () {},
         child: Text(
@@ -22,6 +22,7 @@ class WelcomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Column(
         children: [
           Expanded(
@@ -34,14 +35,15 @@ class WelcomePage extends StatelessWidget {
           Expanded(
             child: Container(
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Text(
                   "Welcome to Annapurna",
                   style: TextStyle(
-                      fontSize: 30,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.green),
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.green,
+                  ),
                 ),
                 Column(
                   children: [
@@ -49,8 +51,14 @@ class WelcomePage extends StatelessWidget {
                     Text("Make reservation in real-time")
                   ],
                 ),
-                button(name: "Login", color: Colors.green, textColor: Colors.white),
-                button(name: "Signup", color: Colors.white, textColor: Colors.green)
+                button(
+                    name: "Login",
+                    color: Colors.green,
+                    textColor: Colors.white),
+                button(
+                    name: "Signup",
+                    color: Colors.white,
+                    textColor: Colors.green)
               ],
             )),
           )
@@ -58,6 +66,4 @@ class WelcomePage extends StatelessWidget {
       ),
     );
   }
-
-  MaterialColor get newMethod => Colors.blue;
 }
